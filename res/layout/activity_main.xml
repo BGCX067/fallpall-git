@@ -9,44 +9,23 @@
     tools:context="com.lancster.hci.fallpal.MainActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/mainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="You registered FallPal accounts"
+        android:background="#F0000F"
+        android:gravity="center"
+        android:height="40dp"
+        android:text="@string/welcome_header"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView1" >
-
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-        </TableRow>
-    </TableLayout>
+    <ListView
+        android:id="@+id/contactList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/mainTitle">
+    </ListView>
 
 </RelativeLayout>
