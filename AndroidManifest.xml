@@ -22,6 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SetupNewContact"
+            android:label="@string/title_activity_setup_new_contact"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lancster.hci.fallpal.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SetupNewActivity"
+            android:label="@string/title_activity_setup_new"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lancster.hci.fallpal.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

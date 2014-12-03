@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lancster.hci.fallpal.SetupNewActivity" >
+	
+    <item
+        android:id="@+id/save_new_contact"
+        android:icon="@drawable/ic_action_save"
+        android:title="@string/save"
+        android:showAsAction="always|withText"
+        />
+
+</menu>

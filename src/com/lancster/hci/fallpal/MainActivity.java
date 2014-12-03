@@ -27,7 +27,12 @@ public class MainActivity extends FragmentActivity {
 		
 		@Override
 		public void onReceive(Context context, Intent intent) {
-			Toast.makeText(MainActivity.this, "selected item " + intent.getExtras().getInt("actionValue"), Toast.LENGTH_SHORT).show();
+			int selected = intent.getExtras().getInt("actionValue");
+			if (selected < myContacts.size()) {
+				startSetupProcess(selected);
+			} else {
+				Toast.makeText(MainActivity.this, "Contact Index ouf of bounds", Toast.LENGTH_SHORT).show();
+			}
 		}
 	};
 
@@ -39,9 +44,13 @@ public class MainActivity extends FragmentActivity {
         initContactList();
     }
 
-    
-    
-    private void initContactList() {
+    protected void startSetupProcess(int selected) {
+		Intent intent = new Intent(this, SetupNewActivity.class);
+		intent.putExtra("getExisting", selected);
+		startActivity(intent);
+	}
+
+	private void initContactList() {
     	myContacts = new ArrayList<Contact>();
     	addTestEntries();
     	
@@ -54,10 +63,7 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				
-
 				Toast.makeText(MainActivity.this, myContacts.get(position).getName(), Toast.LENGTH_SHORT).show();
-				
 			}
         	
 		});
