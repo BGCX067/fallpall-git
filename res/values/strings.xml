@@ -18,5 +18,10 @@
     <string name="title_section3">Section 3</string>
     <string name="title_activity_setup_new">New Contact</string>
     <string name="save">Save</string>
+    <string name="incident_list_line1">In case of</string>
+    <string name="incident_list_line2">will be contacted</string>
+    <string name="incident_list_line3">after</string>
+    <string name="title_activity_setup__step1_">Step 1</string>
+    <string name="title_activity_setup__step2_">Setup_Step2_Activity</string>
 
 </resources>

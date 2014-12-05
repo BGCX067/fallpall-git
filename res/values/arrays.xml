@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Incidents">
+        <item>Fall</item>
+        <item>Lost Connection</item>
+        <item>Irregular Heart Rate</item>
+    </string-array>
+    
+</resources>

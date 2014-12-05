@@ -2,6 +2,10 @@ package com.lancster.hci.fallpal;
 
 import java.util.ArrayList;
 
+import basicClasses.Contact;
+
+import ListAdapters.ContactAdapter;
+import SetupProcess.Setup_Step1_Activity;
 import android.app.FragmentManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -45,7 +49,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     protected void startSetupProcess(int selected) {
-		Intent intent = new Intent(this, SetupNewActivity.class);
+		Intent intent = new Intent(this, Setup_Step1_Activity.class);
 		intent.putExtra("getExisting", selected);
 		startActivity(intent);
 	}

@@ -1,6 +1,12 @@
-package com.lancster.hci.fallpal;
+package ListAdapters;
 
 import java.util.List;
+
+import com.lancster.hci.fallpal.R;
+import com.lancster.hci.fallpal.R.id;
+import com.lancster.hci.fallpal.R.layout;
+
+import basicClasses.Contact;
 
 import android.content.Context;
 import android.view.LayoutInflater;

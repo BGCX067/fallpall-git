@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="15"
+        android:minSdkVersion="16"
         android:targetSdkVersion="21" />
 
     <application
@@ -13,6 +13,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -22,17 +23,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SetupNewContact"
-            android:label="@string/title_activity_setup_new_contact"
+        
+		<activity
+            android:name="SetupProcess$Setup_Step1_Activity"
+            android:label="@string/title_activity_setup__step1_"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lancster.hci.fallpal.MainActivity" />
         </activity>
-        <activity
-            android:name=".SetupNewActivity"
-            android:label="@string/title_activity_setup_new"
+
+		<activity
+            android:name="SetupProcess$Setup_Step2_Activity"
+            android:label="@string/title_activity_setup__step1_"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lancster.hci.fallpal.MainActivity" />
+        </activity>
+        
+		<activity
+            android:name="SetupProcess$Setup_Step3_Activity"
+            android:label="@string/title_activity_setup__step1_"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
