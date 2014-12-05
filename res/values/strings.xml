@@ -23,5 +23,7 @@
     <string name="incident_list_line3">after</string>
     <string name="title_activity_setup__step1_">Step 1</string>
     <string name="title_activity_setup__step2_">Setup_Step2_Activity</string>
-
+    <string name="title_activity_blah">Blah</string>
+    <string name="title_activity_blah2">Blah2</string>
+	<string name="form_not_complete">Please fill in all fields before you proceed.</string>
 </resources>

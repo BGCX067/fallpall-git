@@ -2,11 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.lancster.hci.fallpal.Setup_Step1_Activity" >
     <item 
-        android:id="@+id/proceed" 
+        android:id="@+id/step12back" 
+        android:titleCondensed="Back" 
+        android:title="Back" 
+        android:visible="true" 
+        android:showAsAction="always|withText" 
+        android:enabled="false"/>
+    <item 
+        android:id="@+id/step12proceed" 
         android:titleCondensed="Next" 
         android:title="Proceed" 
         android:visible="true" 
-        android:showAsAction="withText" 
-        android:enabled="true"/>
-
+        android:showAsAction="always|withText" 
+        android:enabled="false"/>
 </menu>

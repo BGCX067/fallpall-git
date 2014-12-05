@@ -30,7 +30,7 @@ public class IncidentContactAdapter extends ArrayAdapter<IncidentContact> {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		TextView contactText = (TextView) convertView.findViewById(R.id.incidentListItemContact);
-		TextView inciText = (TextView) convertView.findViewById(R.id.incidentListItemIncident);
+		TextView inciText = (TextView) convertView.findViewById(R.id.label3);
 		TextView timeText = (TextView) convertView.findViewById(R.id.incidentListItemTimespan);
 		TextView channelText = (TextView) convertView.findViewById(R.id.incidentListItemMedium);
 		

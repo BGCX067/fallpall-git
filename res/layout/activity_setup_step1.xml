@@ -7,7 +7,7 @@
     android:columnCount="2" >
 
     <TextView
-        android:id="@+id/incidentContactListHeader"
+        android:id="@+id/label1"
         android:layout_height="wrap_content"
         android:layout_column="0"
         android:layout_gravity="left"
@@ -16,7 +16,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/step1name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_column="0"
@@ -25,8 +25,8 @@
         android:layout_marginBottom="20dp"
         android:layout_row="1"
         android:ems="10"
-        android:inputType="textPersonName" 
-        android:maxLines="1">
+        android:inputType="textPersonName"
+        android:maxLines="1" >
 
     </EditText>
     
@@ -41,7 +41,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/step1pw"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_column="0"
@@ -50,13 +50,13 @@
         android:layout_marginBottom="20dp"
         android:layout_row="3"
         android:ems="10"
-        android:inputType="textPassword" 
-        android:maxLines="1">
+        android:inputType="textPassword"
+        android:maxLines="1" >
 
     </EditText>
     
      <TextView
-         android:id="@+id/incidentListItemIncident"
+         android:id="@+id/label3"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_column="0"
@@ -66,7 +66,7 @@
          android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/phoneField"
+        android:id="@+id/step1phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="0"

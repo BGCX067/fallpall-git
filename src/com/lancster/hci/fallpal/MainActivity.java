@@ -1,18 +1,16 @@
 package com.lancster.hci.fallpal;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 import android.app.FragmentManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,9 +19,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 import com.lancster.hci.fallpal.ListAdapters.ContactAdapter;
 import com.lancster.hci.fallpal.SetupProcess.SavingStuff;
 import com.lancster.hci.fallpal.SetupProcess.Setup_Step1_Activity;
@@ -57,6 +52,12 @@ public class MainActivity extends FragmentActivity {
         saveme = new SavingStuff(this);
 
         myContacts = saveme.getContactlist();
+        
+        try {
+			System.out.println(Arrays.toString(getResources().getStringArray(R.array.incidents)));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
         
         initContactList();
     }
