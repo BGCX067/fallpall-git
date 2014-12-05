@@ -1,4 +1,4 @@
-package basicClasses;
+package com.lancster.hci.fallpal.basicClasses;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -23,6 +23,14 @@ public class Contact {
 	public Contact(String contactName) {
 		this.setName(contactName);
 		this.status = R.integer.STATUS_UNKNOWN;
+		this.fallContacts = new ArrayList<IncidentContact>();
+		this.noConnContacts = new ArrayList<IncidentContact>();
+		this.heartRateContacts = new ArrayList<IncidentContact>();
+		
+		Location temp = new Location("Reverse");
+		temp.setLatitude(0.0);
+		temp.setLongitude(0.0);
+		this.homeLoc = temp;
 	}
 
 	public String getPhone() {

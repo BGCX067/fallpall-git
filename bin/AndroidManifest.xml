@@ -7,6 +7,9 @@
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="21" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -23,33 +26,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-		<activity
-            android:name="SetupProcess$Setup_Step1_Activity"
-            android:label="@string/title_activity_setup__step1_"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.lancster.hci.fallpal.MainActivity" />
-        </activity>
-
-		<activity
-            android:name="SetupProcess$Setup_Step2_Activity"
-            android:label="@string/title_activity_setup__step1_"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.lancster.hci.fallpal.MainActivity" />
-        </activity>
-        
-		<activity
-            android:name="SetupProcess$Setup_Step3_Activity"
-            android:label="@string/title_activity_setup__step1_"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.lancster.hci.fallpal.MainActivity" />
-        </activity>
+        <activity 
+            android:name=".SetupProcess.Setup_Step1_Activity" 
+            android:label="@string/title_activity_setup__step1_"/>
+        <activity 
+            android:label="@string/title_activity_setup__step2_" 
+            android:name=".SetupProcess.Setup_Step2_Activity"/>
+        <activity android:name=".SetupProcess.Setup_Step3_Activity"/>
     </application>
 
 </manifest>

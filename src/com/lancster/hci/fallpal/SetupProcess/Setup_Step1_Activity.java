@@ -1,22 +1,60 @@
-package SetupProcess;
-
-import com.lancster.hci.fallpal.R;
-import com.lancster.hci.fallpal.R.id;
-import com.lancster.hci.fallpal.R.layout;
-import com.lancster.hci.fallpal.R.menu;
+package com.lancster.hci.fallpal.SetupProcess;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.lancster.hci.fallpal.MainActivity;
+import com.lancster.hci.fallpal.R;
+import com.lancster.hci.fallpal.basicClasses.Contact;
+
 public class Setup_Step1_Activity extends Activity {
+	private GsonBuilder gBuilder;
+	private Gson gson;
+	private Contact temp;
 	
+	private SavingStuff saveme;
+	
+	private SharedPreferences prefs;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_setup_step1);
+		
+		saveme = new SavingStuff(this);
+		
+		gBuilder = new GsonBuilder();
+		gson = gBuilder.create();
+		
+		temp = saveme.getTempContact();
+		
+		if (temp == null) {
+			temp = new Contact("");
+		} else {
+			fillForm();
+		}
+	}
+	
+	@Override
+	protected void onStop() {
+		super.onStop();
+		saveme.saveTempContact(temp);
+	}
+
+	private void readFields() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void fillForm() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override

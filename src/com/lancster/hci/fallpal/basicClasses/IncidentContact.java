@@ -1,4 +1,4 @@
-package basicClasses;
+package com.lancster.hci.fallpal.basicClasses;
 
 public class IncidentContact {
 	private String name;
