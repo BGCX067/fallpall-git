@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.location.Location;
+import android.text.InputFilter.LengthFilter;
+import android.util.Log;
 
 import com.lancster.hci.fallpal.R;
 import com.lancster.hci.fallpal.R.integer;
@@ -47,6 +49,7 @@ public class Contact {
 
 	public void setFallContact(IncidentContact fallContact) {
 		this.fallContacts.add(fallContact);
+		Log.i("Contact", "Saved new Fall Contact, length is now " + getFallContacts().size());
 	}
 
 	public ArrayList<IncidentContact> getNoConnContacts() {
@@ -55,6 +58,7 @@ public class Contact {
 
 	public void setNoConnContacts(IncidentContact noConnContact) {
 		this.noConnContacts.add(noConnContact);
+		Log.i("Contact", "Saved new Conn Contact, length is now " + getNoConnContacts().size());
 	}
 
 	public ArrayList<IncidentContact> getHeartRateContacts() {
@@ -63,6 +67,7 @@ public class Contact {
 
 	public void setHeartRateContacts(IncidentContact heartRateContact) {
 		this.heartRateContacts.add(heartRateContact);
+		Log.i("Contact", "Saved new Heart Contact, length is now "+ getHeartRateContacts().size());
 	}
 
 	public Location getHomeLoc() {

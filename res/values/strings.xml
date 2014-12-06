@@ -25,5 +25,8 @@
     <string name="title_activity_setup__step2_">Setup_Step2_Activity</string>
     <string name="title_activity_blah">Blah</string>
     <string name="title_activity_blah2">Blah2</string>
-	<string name="form_not_complete">Please fill in all fields before you proceed.</string>
+    <string name="form_not_complete">Please fill in all fields before you proceed.</string>
+    <string name="setup_add_inci_contact_1_title">Please define a contact to be contacted in case of </string>
+    <string name="title_activity_setup__step4_">Define contact</string>
+
 </resources>

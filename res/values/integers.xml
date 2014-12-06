@@ -3,4 +3,12 @@
     <integer name = "STATUS_UNKNOWN">0</integer>
     <integer name = "STATUS_OK">1</integer>
     <integer name = "STATUS_FALL">2</integer>
+    
+    <integer name = "CASE_FALL">0</integer>
+    <integer name = "CASE_HEART">1</integer>
+    <integer name = "CASE_NO_CONN">2</integer>
+    
+    <integer name = "VIA_PHONE">0</integer>
+    <integer name = "VIA_SMS">1</integer>
+    <integer name = "VIA_MAIL">2</integer>
 </resources>

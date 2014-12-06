@@ -10,6 +10,7 @@ import com.lancster.hci.fallpal.basicClasses.IncidentContact;
 
 import android.content.Context;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -29,6 +30,11 @@ public class IncidentContactAdapter extends ArrayAdapter<IncidentContact> {
 	
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+		if (convertView == null) {
+			LayoutInflater la = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			convertView = la.inflate(R.layout.incident_contact_list_tem, parent, false);
+		}
+		
 		TextView contactText = (TextView) convertView.findViewById(R.id.incidentListItemContact);
 		TextView inciText = (TextView) convertView.findViewById(R.id.label3);
 		TextView timeText = (TextView) convertView.findViewById(R.id.incidentListItemTimespan);

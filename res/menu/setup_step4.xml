@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lancster.hci.fallpal.SetupProcess.Setup_Step4_Activity" >
+
+	<item 
+        android:id="@+id/IContactDone" 
+        android:titleCondensed="Done" 
+        android:title="Done" 
+        android:visible="true" 
+        android:showAsAction="always" 
+        android:enabled="true"/>
+
+</menu>

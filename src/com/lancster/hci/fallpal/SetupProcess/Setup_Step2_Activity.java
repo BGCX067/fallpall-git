@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -51,13 +52,17 @@ public class Setup_Step2_Activity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				// TODO Auto-generated method stub
-				
+				startContactSetup(position);				
 			}
-			
 		});
 	}
 
+	private void startContactSetup(int which) {
+		Intent intent = new Intent(this, Setup_Step3_Activity.class);
+		intent.putExtra("category", which);
+		startActivity(intent);
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

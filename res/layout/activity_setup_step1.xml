@@ -78,7 +78,7 @@
     </EditText>
 
     <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/ISearchContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="1"
