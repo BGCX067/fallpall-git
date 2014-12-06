@@ -8,18 +8,11 @@
         android:showAsAction="always"
         android:visible="true"/>
  <item 
-        android:id="@+id/step12back" 
-        android:titleCondensed="Back" 
-        android:title="Back" 
+        android:id="@+id/IContactListDone" 
+        android:titleCondensed="Done" 
+        android:title="Done" 
         android:visible="true" 
         android:showAsAction="always" 
-        android:enabled="false"/>
-    <item 
-        android:id="@+id/step12proceed" 
-        android:titleCondensed="Next" 
-        android:title="Proceed" 
-        android:visible="true" 
-        android:showAsAction="always" 
-        android:enabled="false"/>    
+        android:enabled="true"/>   
 
 </menu>

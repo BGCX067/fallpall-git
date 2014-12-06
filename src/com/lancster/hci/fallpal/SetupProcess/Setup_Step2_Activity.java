@@ -21,6 +21,8 @@ public class Setup_Step2_Activity extends Activity {
 
 	String[] incidents;
 	ListView inciList;
+	IncidentListAdapter inciAd;
+	List<Integer> inci;
 	
 	SavingStuff saveme;
 	Contact temp;
@@ -38,13 +40,10 @@ public class Setup_Step2_Activity extends Activity {
 	private void initList() {
 		inciList = (ListView) findViewById(R.id.incidentList);
 		
-		List<Integer> inci = new ArrayList<Integer>();
-		inci.add(temp.getFallContacts().size());
-		inci.add(temp.getHeartRateContacts().size());
-		inci.add(temp.getNoConnContacts().size());
+		updateLocalList();
 		
 		System.out.println(inci.size());
-		IncidentListAdapter inciAd = new IncidentListAdapter(this, inci);
+		inciAd = new IncidentListAdapter(this, inci);
 		inciList.setAdapter(inciAd);
 		
 		inciList.setOnItemClickListener(new OnItemClickListener() {
@@ -57,10 +56,22 @@ public class Setup_Step2_Activity extends Activity {
 		});
 	}
 
+	private void updateLocalList() {
+		if (inci == null) {
+			inci = new ArrayList<Integer>();
+		} else {
+			inci.clear();
+		}
+		
+		inci.add(temp.getFallContacts().size());
+		inci.add(temp.getHeartRateContacts().size());
+		inci.add(temp.getNoConnContacts().size());
+	}
+
 	private void startContactSetup(int which) {
 		Intent intent = new Intent(this, Setup_Step3_Activity.class);
 		intent.putExtra("category", which);
-		startActivity(intent);
+		startActivityForResult(intent,0);
 	}
 	
 	@Override
@@ -72,6 +83,14 @@ public class Setup_Step2_Activity extends Activity {
 		return true;
 	}
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		temp = saveme.getTempContact();
+		updateLocalList();
+		inciAd.notifyDataSetChanged();
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will

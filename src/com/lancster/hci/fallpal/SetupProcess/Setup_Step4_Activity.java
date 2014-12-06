@@ -157,15 +157,15 @@ public class Setup_Step4_Activity extends Activity {
 		
 		switch (myIncident) {
 		case 0:
-			temp.setFallContact(result);
+			temp.addFallContact(result);
 			break;
 			
 		case 1:
-			temp.setHeartRateContacts(result);
+			temp.addHeartRateContact(result);
 			break;
 		
 		case 2:
-			temp.setNoConnContacts(result);
+			temp.addtNoConnContact(result);
 			break;
 
 		default:

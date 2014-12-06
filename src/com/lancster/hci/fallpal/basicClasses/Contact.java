@@ -47,7 +47,7 @@ public class Contact {
 		return fallContacts;
 	}
 
-	public void setFallContact(IncidentContact fallContact) {
+	public void addFallContact(IncidentContact fallContact) {
 		this.fallContacts.add(fallContact);
 		Log.i("Contact", "Saved new Fall Contact, length is now " + getFallContacts().size());
 	}
@@ -56,7 +56,7 @@ public class Contact {
 		return noConnContacts;
 	}
 
-	public void setNoConnContacts(IncidentContact noConnContact) {
+	public void addtNoConnContact(IncidentContact noConnContact) {
 		this.noConnContacts.add(noConnContact);
 		Log.i("Contact", "Saved new Conn Contact, length is now " + getNoConnContacts().size());
 	}
@@ -65,7 +65,7 @@ public class Contact {
 		return heartRateContacts;
 	}
 
-	public void setHeartRateContacts(IncidentContact heartRateContact) {
+	public void addHeartRateContact(IncidentContact heartRateContact) {
 		this.heartRateContacts.add(heartRateContact);
 		Log.i("Contact", "Saved new Heart Contact, length is now "+ getHeartRateContacts().size());
 	}
@@ -93,5 +93,17 @@ public class Contact {
 
 	public void setStatus(int status) {
 		this.status = status;
+	}
+
+	public void setFallContacts(ArrayList<IncidentContact> fallContacts) {
+		this.fallContacts = fallContacts;
+	}
+
+	public void setNoConnContacts(ArrayList<IncidentContact> noConnContacts) {
+		this.noConnContacts = noConnContacts;
+	}
+
+	public void setHeartRateContacts(ArrayList<IncidentContact> heartRateContacts) {
+		this.heartRateContacts = heartRateContacts;
 	}
 }

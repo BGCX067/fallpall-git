@@ -4,31 +4,11 @@
     android:layout_height="fill_parent" >
 
     <TextView
-        android:id="@+id/nrOfActions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/label3"
-        android:layout_alignParentLeft="true"
-        android:text="@string/incident_list_line1"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#a0a0a0" />
-
-    <TextView
-        android:id="@+id/label3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="8dp"
-        android:layout_toRightOf="@+id/nrOfActions"
-        android:text="Incident"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:id="@+id/incidentListItemContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/label3"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/IListIndex"
         android:text="Contact"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -45,15 +25,18 @@
         android:textColor="#a0a0a0" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+        android:id="@+id/IListIndex"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/incidentListItemTimespan"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/incidentListItemTimespan"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/incidentListItemContact"
         android:layout_margin="8dp"
+        android:background="#dddddd"
+        android:gravity="center"
         android:text="Nr"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#00aaaa"
         android:textSize="40sp" />
 
     <TextView
@@ -61,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/incidentListItemMedium"
-        android:layout_alignParentLeft="true"
+        android:layout_toRightOf="@+id/IListIndex"
         android:text="via"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#A0a0a0" />
@@ -81,6 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/incidentListItemTimespan"
+        android:layout_toRightOf="@+id/IListIndex"
         android:text="@string/incident_list_line3"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#a0a0a0" />
@@ -95,5 +79,16 @@
         android:layout_toRightOf="@+id/textView6"
         android:text="Timespan"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/incidentListItemTimespan"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/incidentListItemTimespan"
+        android:text="seconds"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#a0a0a0" />
 
 </RelativeLayout>

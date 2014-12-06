@@ -36,14 +36,14 @@ public class IncidentContactAdapter extends ArrayAdapter<IncidentContact> {
 		}
 		
 		TextView contactText = (TextView) convertView.findViewById(R.id.incidentListItemContact);
-		TextView inciText = (TextView) convertView.findViewById(R.id.label3);
 		TextView timeText = (TextView) convertView.findViewById(R.id.incidentListItemTimespan);
 		TextView channelText = (TextView) convertView.findViewById(R.id.incidentListItemMedium);
+		TextView listIndex = (TextView) convertView.findViewById(R.id.IListIndex);
 		
 		contactText.setText(iList.get(position).getName());
-		inciText.setText(Integer.toString(iList.get(position).getChannel()));
 		timeText.setText(Long.toString(iList.get(position).getTimeout()));
 		channelText.setText(Integer.toString(iList.get(position).getChannel()));
+		listIndex.setText(Integer.toString(position+1));
 		
 		return convertView;
 	}

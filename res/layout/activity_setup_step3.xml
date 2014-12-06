@@ -9,19 +9,33 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Here you can add incidents and the actions to be performed"
+        android:text="Here you can define what happens in case of: "
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ListView
         android:id="@+id/IncidentContactList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/label1"
-        android:layout_centerHorizontal="true" >
+        android:layout_below="@+id/IListIncident"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" >
 
     </ListView>
+
+    <TextView
+        android:id="@+id/IListIncident"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/label1"
+        android:layout_marginBottom="20dp"
+        android:background="#008080"
+        android:gravity="center"
+        android:text="&lt;Incident>"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#eeeeee" />
 
 </RelativeLayout>
