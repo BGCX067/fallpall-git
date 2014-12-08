@@ -1,92 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:layout_margin="30dp"
-    android:columnCount="2" >
 
-    <TextView
-        android:id="@+id/label1"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_gravity="left"
-        android:layout_row="0"
-        android:text="Name"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:layout_margin="30dp">
 
-    <EditText
-        android:id="@+id/step1name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill_horizontal"
-        android:layout_marginBottom="20dp"
-        android:layout_row="1"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:maxLines="1" >
+       <EditText
+            android:id="@+id/step1name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Please enter a name"
+            android:inputType="textPersonName"
+            android:maxLines="1" >
 
-    </EditText>
-    
-    <TextView
-        android:id="@+id/nrOfActions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_gravity="left"
-        android:layout_row="2"
-        android:text="Password"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        </EditText>
 
-    <EditText
-        android:id="@+id/step1pw"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill_horizontal"
-        android:layout_marginBottom="20dp"
-        android:layout_row="3"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:maxLines="1" >
+        <EditText
+            android:id="@+id/step1pw"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/step1name"
+            android:layout_marginBottom="20dp"
+            android:hint="Enter a password"
+            android:inputType="textPassword"
+            android:maxLines="1" />
 
-    </EditText>
-    
-     <TextView
-         android:id="@+id/label3"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_column="0"
-         android:layout_gravity="left"
-         android:layout_row="4"
-         android:text="Phone Number"
-         android:textAppearance="?android:attr/textAppearanceMedium" />
+        <EditText
+            android:id="@+id/step1phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/step1pw"
+            android:layout_marginBottom="20dp"
+            android:layout_toLeftOf="@+id/ISearchContact"
+            android:ems="10"
+            android:hint="Enter a phone number"
+            android:inputType="phone" />
 
-    <EditText
-        android:id="@+id/step1phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_gravity="fill_horizontal"
-        android:layout_row="5"
-        android:ems="10"
-        android:inputType="phone" >
+        <ImageButton
+            android:id="@+id/ISearchContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/step1phone"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/step1phone"
+            android:background="#AAAAAA"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            android:src="@drawable/ic_action_person" />
 
-    </EditText>
+        <EditText
+            android:id="@+id/step1address"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/step1phone"
+            android:ems="10"
+            android:hint="Enter an address"
+            android:lines="4"
+            android:inputType="textMultiLine"
+            android:scrollHorizontally="false" />
 
-    <ImageButton
-        android:id="@+id/ISearchContact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_gravity="top"
-        android:layout_row="5"
-        android:background="#AAAAAA"
-        android:maxHeight="50dp"
-        android:maxWidth="50dp"
-        android:src="@drawable/ic_action_person" />
-
-</GridLayout>
+    </RelativeLayout>

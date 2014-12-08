@@ -22,6 +22,8 @@ public class Contact {
 	
 	private Location homeLoc;
 	
+	private String address;
+	
 	public Contact(String contactName) {
 		this.setName(contactName);
 		this.status = R.integer.STATUS_UNKNOWN;
@@ -33,6 +35,8 @@ public class Contact {
 		temp.setLatitude(0.0);
 		temp.setLongitude(0.0);
 		this.homeLoc = temp;
+		
+		this.address = "";
 	}
 
 	public String getPhone() {
@@ -105,5 +109,13 @@ public class Contact {
 
 	public void setHeartRateContacts(ArrayList<IncidentContact> heartRateContacts) {
 		this.heartRateContacts = heartRateContacts;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 }

@@ -28,5 +28,7 @@
     <string name="form_not_complete">Please fill in all fields before you proceed.</string>
     <string name="setup_add_inci_contact_1_title">Please define a contact to be contacted in case of </string>
     <string name="title_activity_setup__step4_">Define contact</string>
+    <string name="title_activity_setup__step5_">Setup_Step5_Activity</string>
+    <string name="title_activity_status_monitor">StatusMonitor</string>
 
 </resources>

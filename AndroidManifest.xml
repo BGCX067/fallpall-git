@@ -51,12 +51,28 @@
                 android:value="com.lancster.hci.fallpal.MainActivity" />
         </activity>
         <activity
-            android:name="com.lancster.hci.fallpal.SetupProcess.Setup_Step4_Activity"
+            android:name=".SetupProcess.Setup_Step4_Activity"
             android:label="@string/title_activity_setup__step4_"
             android:parentActivityName=".SetupProcess.Setup_Step3_Activity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lancster.hci.fallpal.SetupProcess.Setup_Step3_Activity" />
+        </activity>
+        <activity
+            android:name="com.lancster.hci.fallpal.SetupProcess.Setup_Step5_Activity"
+            android:label="@string/title_activity_setup__step5_"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lancster.hci.fallpal.MainActivity" />
+        </activity>
+        <activity
+            android:name=".StatusMonitor"
+            android:label="@string/title_activity_status_monitor"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lancster.hci.fallpal.MainActivity" />
         </activity>
     </application>
 

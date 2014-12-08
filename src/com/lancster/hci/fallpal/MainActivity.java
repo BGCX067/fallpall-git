@@ -52,6 +52,7 @@ public class MainActivity extends FragmentActivity {
         saveme = new SavingStuff(this);
 
         myContacts = saveme.getContactlist();
+        myContacts.add(new Contact("Steve"));
         
         try {
 			System.out.println(Arrays.toString(getResources().getStringArray(R.array.incidents)));
@@ -79,13 +80,20 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				Toast.makeText(MainActivity.this, myContacts.get(position).getName(), Toast.LENGTH_SHORT).show();
+				startStatusDemo();
+				
+				
 			}
         	
 		});
         registerForContextMenu(contactList);
     
     }
+	
+	private void startStatusDemo() {
+		Intent intent = new Intent(this, StatusMonitor.class);
+		startActivity(intent);
+	}
     
     public void addContact(String name) {
     	myContacts.add(new Contact(name));

@@ -79,6 +79,7 @@ public class Setup_Step3_Activity extends Activity {
 		}
 		
 		Collections.sort(iContacts);
+		Log.i("Step3","LocalList has now " + iContacts.size() + " entries");
 	}
 
 	private void initIContactList() {
